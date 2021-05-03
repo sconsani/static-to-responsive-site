@@ -101,7 +101,6 @@ header nav ul li a{
 	padding-top: 10px;
 	width: 100%;
 	/*box-sizing: border-box;*/
-	
 }
 
 .main-title {
@@ -187,10 +186,13 @@ footer span {
 	}
 
 	header h1{
+		flex-wrap: nowrap;
 		justify-content: flex-start;
+		border-bottom: 0;
 	}
 
 	header nav ul {
+		flex-wrap: nowrap;
 		flex-direction: row;
 		justify-content: flex-end;
 	}
@@ -204,6 +206,7 @@ footer span {
 
 	header h1{
 		justify-content: flex-start;
+		border-bottom: 0;
 	}
 
 	header nav ul {
