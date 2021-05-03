@@ -1,9 +1,11 @@
 body {
 	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	max-width: 400px;
 }
 
 .container{
-	max-width: 1200px;
+	/*max-width: 400px;*/
 	margin: 0 auto;
 }
 
@@ -15,13 +17,13 @@ h3 {
 	font-weight: 700;
 }
 h1 {
-	font-size: 30px;
+	font-size: 3em;
 }
 h2 {
-	font-size: 18px;
+	font-size: 2em;
 }
 h3 {
-	font-size: 12px;
+	font-size: 1em;
 }
 
 p {
@@ -32,34 +34,48 @@ p {
 
 /*The widths are in a percentage!*/
 header {
-	height: 110px;
 	border-bottom: 3px solid #77a466;
 	margin: 0 auto;
+	display: flex;
+	width: 100%;
+	padding: 0 10px;
+	box-sizing: border-box;
 }
 
 header h1 {
-	float: left;
 	margin: 0;
 	padding: 38px 0;
+	display: flex;
+
+	justify-content: center;
 }
 header h1 span {
 	color: #77a466;
 }
 
 header nav {
-	float: right;
+
+	width: 100%;
 	padding: 46px 0;
 }
+
 header nav ul {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-content: center;
+	justify-content: space-between;
 	margin: 0;
 	padding: 0;
 }
 header nav ul li {
+	display: flex;
+
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 14px;
 	padding: 0 10px;
-	display: inline;
+	/*display: inline;*/
 }
 header nav ul li a{
 	text-decoration: none;
@@ -70,29 +86,34 @@ header nav ul li a{
 .top-section,
 .bottom-section {
 	margin: 0 auto;
-	clear: both;
+	width: 100%;
+
 }
 
 .main-image {
 	height: auto;
-	float: left;
+	width: 100%;
+	
 }
 .main-image img {
 	width: 100%;
+	box-sizing: border-box;
 	border-bottom: 3px solid #77a466;
 }
 
 .main-title {
 	height: auto;
-	float: left;
+	
 }
 .main-title h2 {
-	text-align: left;
-	padding: 5px 0;
+	/*text-align: left;*/
+	padding: 5px 10px;
 	color: #77a466;
+
 }
 .main-title p {
-	padding: 0;
+	box-sizing: border-box;
+	padding: 0 10px;
 	font-size: 16px;
 	line-height: 25px;
 }
@@ -100,29 +121,28 @@ header nav ul li a{
 .section-one,
 .section-two,
 .section-three {
-	width: 33%;
-	height: auto;
-	float: left;
+	width: 100%;
+	/*height: auto;*/
 	border-top: 1px solid #eee;
 }
 
 .section-one h3 {
-	padding: 10px 0;
+	padding: 10px 10px;
 }
 
 .section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
 }
 
 .section-two h3,
 .section-three h3 {
-	padding: 10px 30px;
+	padding: 10px 10px;
 }
 
 .menu {
 	list-style: none;
-	padding: 0;
+	padding: 0 10px;
 }
 .menu li {
 	padding: 10px 0;
@@ -145,8 +165,10 @@ footer {
 	height: 50px;
 	border-top: 3px solid #eee;
 	margin: 0 auto;
-	clear: both;
-	text-align: center;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-content: center;
 }
 footer span {
 	font-family: 'Galada', cursive;
@@ -154,3 +176,37 @@ footer span {
 	color: #77a466;
 	font-size: 14px;
 }
+
+
+@media (min-width: 768px) {
+	body{
+		max-width: 768px;
+	}
+
+	header h1{
+		justify-content: flex-start;
+	}
+
+	header nav ul {
+		flex-direction: row;
+		justify-content: flex-end;
+	}
+}
+
+
+@media (min-width: 1200px) {
+	body{
+		max-width: 1200px;
+	}
+
+	header h1{
+		justify-content: flex-start;
+	}
+
+	header nav ul {
+		flex-direction: row;
+		justify-content: flex-end;
+	}
+
+}
+
